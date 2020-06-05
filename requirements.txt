@@ -83,7 +83,7 @@ featuretools==0.4.1
 filelock==3.0.12
 firebase-admin==4.1.0
 fix-yahoo-finance==0.0.22
-Flask==0.12.2
+Flask==1.0
 Flask-Cors==3.0.8
 flask-ngrok==0.0.25
 folium==0.8.3
