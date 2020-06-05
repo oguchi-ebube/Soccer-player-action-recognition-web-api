@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>upload</title>
+    <!--<link rel= "stylesheet" href = "{{url_for("static",filename="css/model.css")}}" type="text/css">-->
+    
+
+
+</head>
+
+<body>
+    <form action = "/api"" method = "post" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <input type = "submit" value="Upload">
+    </form>
+    </br>
+    </br>
+    </br>
+    <table id="tblData">
+    <tr>
+    <th>Action</th>
+    <th>Number_of_occurence</th>
+    <!--<th>Original Outcome</th>-->
+    </tr>
+    <tr>
+    <td>dribbling</td>
+    <td>{{model.dribbling.count}}</td>
+    
+    </tr>
+    <tr>
+    <td>kicking</td>
+    <td>{{model.kicking.count}}</td>
+   
+    </tr>
+    <tr>
+    <td>passing</td>
+    <td>{{model.passing.count}}</td>
+   
+    </tr>
+    <tr>
+    <td>running</td>
+    <td>{{model.running.count}}</td>
+  
+    </tr>
+    </table>
+    <br/>
+    <span id="spnText"></span>
+    
+    <video autoplay controls src="data:video/mp4;base64,{{video_url}}"> The "video" tag is not supported by your browser. Click [here] to download the video file.
+    </video>
+    
+</body>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $("#tblData tr:has(td)").mouseover(function(e) {
+    $(this).css("cursor", "pointer");
+  });
+  $("#tblData tr:has(td)").click(function(e) {
+    $("#tblData td").removeClass("highlight");
+    var clickedCell = $(e.target).closest("td");
+    clickedCell.addClass("highlight");
+    $("#spnText").html(
+      'Clicked table cell value is: <b> ' + clickedCell.text() + '</b>');
+  });
+});
+</script>
+
+</html>

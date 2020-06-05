@@ -1,0 +1,34 @@
+ body {
+      font-family: arial, sans-serif;
+      font-size: 14px;
+    }
+    
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td,
+    th {
+      border: 2px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    th {
+      background-color: #ccd;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #ecf6fc;
+    }
+    
+    tr:nth-child(odd) {
+      background-color: #ddeedd;
+    }
+    
+    .highlight {
+      background-color: Yellow;
+      color: Green;
+    }

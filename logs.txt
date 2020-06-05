@@ -1,0 +1,11 @@
+base_directory /content/drive/My Drive/Colab Notebooks/Soccer_Analysis
+Traceback (most recent call last):
+  File "run.py", line 1, in <module>
+    from api import api,socketio,celery
+  File "/content/drive/My Drive/Colab Notebooks/Soccer_Analysis/api/__init__.py", line 27, in <module>
+    from api.views import mod as modules 
+  File "/content/drive/My Drive/Colab Notebooks/Soccer_Analysis/api/views.py", line 5, in <module>
+    import api.utils.lib_images_io as lib_images_io
+  File "/content/drive/My Drive/Colab Notebooks/Soccer_Analysis/api/utils/lib_images_io.py", line 34, in <module>
+    from api import socketio
+ImportError: cannot import name 'socketio'
